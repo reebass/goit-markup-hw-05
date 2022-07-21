@@ -97,6 +97,14 @@ p {
   letter-spacing: 0.03em;
 }
 
+.uppertitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .features-list,
 .about-list,
 .team-list,
@@ -119,6 +127,54 @@ p {
   overflow: hidden;
 }
 
+.backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-window {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background-color: var(--text-white-cl);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--text-white-cl);
+  cursor: pointer;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 /* header */
 
 .header {
@@ -169,6 +225,24 @@ p {
 .header-contacts:focus,
 .header-contacts:hover {
   color: var(--text-accent-cl);
+}
+
+.header-link-current {
+  position: relative;
+}
+
+.header-link-current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--text-accent-cl);
 }
 
 .header-contacts {
@@ -272,11 +346,6 @@ p {
 }
 
 .feature-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
@@ -292,6 +361,26 @@ p {
 
 .about {
   padding-top: 0;
+}
+
+.about-item {
+  position: relative;
+}
+
+.about-img-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white-cl);
+
+  text-align: center;
+  padding: 27px 5px;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /* Our team */
