@@ -27,6 +27,10 @@ body {
   color: var(--text-main-cl);
 }
 
+.main {
+  margin-top: 80px;
+}
+
 /* reser styles */
 .link {
   text-decoration: none;
@@ -55,12 +59,6 @@ p {
 /* base style */
 .no-scroll {
   overflow: hidden;
-}
-
-.header.no-transparency {
-  border-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(3px);
 }
 
 .container {
@@ -205,7 +203,7 @@ p {
 
 .header {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
   z-index: 100;
@@ -221,6 +219,13 @@ p {
   transition: background-color var(--animation-modal),
     backdrop-filter var(--animation-modal);
 }
+
+.header.no-transparency {
+  border-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(3px);
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -253,7 +258,7 @@ p {
   display: block;
   color: var(--text-nav-cl);
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
   transition: color var(--animation);
 }
 
@@ -288,7 +293,7 @@ p {
   align-items: center;
   color: var(--text-second-cl);
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
   transition: color var(--animation);
 }
 .mail-icon {
